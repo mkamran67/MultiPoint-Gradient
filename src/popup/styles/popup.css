@@ -1,0 +1,528 @@
+/* Light theme (default) */
+.app {
+  --bg: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e8e8e8;
+  --text: #1a1a1a;
+  --text-secondary: #666666;
+  --border: #e0e0e0;
+  --accent: #4ECDC4;
+  --accent-hover: #3dbdb5;
+  --danger: #FF6B6B;
+  --danger-hover: #e55a5a;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* Dark theme */
+.app.dark {
+  --bg: #1a1a2e;
+  --bg-secondary: #252542;
+  --bg-tertiary: #2d2d4a;
+  --text: #e8e8e8;
+  --text-secondary: #aaaaaa;
+  --border: #3a3a5c;
+  --accent: #4ECDC4;
+  --accent-hover: #5ee0d7;
+  --danger: #FF6B6B;
+  --danger-hover: #ff8585;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+:global(body) {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+}
+
+.app {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 12px 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.nav {
+  display: flex;
+  gap: 0;
+}
+
+.nav-btn {
+  flex: 1;
+  padding: 8px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.nav-btn:hover {
+  color: var(--text);
+}
+
+.nav-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Main view */
+.main-view {
+  padding: 12px 16px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+.btn-stop {
+  background: var(--danger);
+  color: #fff;
+  width: 100%;
+}
+
+.btn-stop:hover {
+  background: var(--danger-hover);
+}
+
+.btn-copy {
+  background: var(--accent);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-small {
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 4px;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-group .btn {
+  flex: 1;
+}
+
+.picker-controls {
+  margin-bottom: 12px;
+}
+
+/* Gradient preview */
+.gradient-preview {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px var(--shadow);
+}
+
+.gradient-canvas {
+  display: block;
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+}
+
+/* Angle picker */
+.angle-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 8px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.angle-dial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.angle-needle {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  width: 2px;
+  height: 16px;
+  background: var(--accent);
+  transform-origin: bottom center;
+  margin-left: -1px;
+  border-radius: 1px;
+}
+
+.angle-input-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.angle-input {
+  width: 50px;
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  text-align: center;
+}
+
+.angle-unit {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* Color list */
+.color-list {
+  margin-bottom: 10px;
+}
+
+.color-list-header {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.color-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: var(--bg-secondary);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.color-hex {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 11px;
+  min-width: 60px;
+}
+
+.color-hsl {
+  font-size: 10px;
+  color: var(--text-secondary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.color-pos {
+  font-size: 11px;
+  color: var(--text-secondary);
+  min-width: 30px;
+  text-align: right;
+}
+
+.color-actions {
+  display: flex;
+  gap: 2px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 2px 4px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 10px;
+  border-radius: 3px;
+  line-height: 1;
+}
+
+.btn-icon:hover {
+  background: var(--bg-tertiary);
+  color: var(--text);
+}
+
+.btn-icon:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.btn-remove:hover {
+  color: var(--danger);
+}
+
+/* Output tabs */
+.output-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 6px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-btn:hover {
+  color: var(--text);
+}
+
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Output panel */
+.output-panel {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.output-code {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin: 0;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: var(--text);
+}
+
+.btn-copy {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+/* History panel */
+.history-panel {
+  padding: 12px 16px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.history-header h2 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.history-preview {
+  width: 80px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.1s;
+}
+
+.history-preview:hover {
+  transform: scale(1.05);
+}
+
+.history-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.history-colors {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.history-date {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+/* Settings panel */
+.settings-panel {
+  padding: 12px 16px;
+}
+
+.settings-panel h2 {
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+.setting-group {
+  margin-bottom: 16px;
+}
+
+.setting-label {
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.setting-description {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.setting-description kbd {
+  background: var(--bg-tertiary);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 11px;
+  border: 1px solid var(--border);
+}
+
+.theme-options {
+  display: flex;
+  gap: 6px;
+}
+
+.theme-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 12px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.theme-btn:hover {
+  border-color: var(--accent);
+}
+
+.theme-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+}
+
+.empty-state p {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.hint {
+  font-size: 11px;
+  opacity: 0.7;
+}
