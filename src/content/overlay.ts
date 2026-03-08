@@ -147,7 +147,9 @@ export function hideTooltip() {
 
 export function clearDots() {
   if (!dotsContainer) return;
-  dotsContainer.innerHTML = '';
+  while (dotsContainer.firstChild) {
+    dotsContainer.firstChild.remove();
+  }
   lineEl = null;
   tooltipEl = null;
 }

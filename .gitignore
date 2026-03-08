@@ -1,4 +1,7 @@
 .claude
+web-ext
+dist-firefox
+dist
 
 # Logs
 logs
