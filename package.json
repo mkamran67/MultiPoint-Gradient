@@ -12,7 +12,8 @@
     "dev": "vite build --watch --mode development",
     "build": "vite build && node scripts/build.js",
     "build:chrome": "vite build",
-    "build:firefox": "vite build && node scripts/build.js --firefox-only"
+    "build:firefox": "vite build && node scripts/build.js --firefox-only",
+    "package": "vite build && node scripts/build.js --zip"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.9.0",
