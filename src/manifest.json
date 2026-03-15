@@ -1,25 +1,20 @@
 {
-  "manifest_version": 3,
-  "name": "MultiPoint Gradient",
-  "version": "1.0.0",
-  "description": "Pick colors from any webpage, sample gradients with a line tool, and export as CSS, Tailwind, SVG, or JSON.",
-  "permissions": ["activeTab", "storage", "scripting"],
-  "host_permissions": ["<all_urls>"],
-  "action": {
-    "default_popup": "popup/index.html",
-    "default_icon": {
-      "16": "assets/icons/icon-16.png",
-      "32": "assets/icons/icon-32.png",
-      "48": "assets/icons/icon-48.png",
-      "128": "assets/icons/icon-128.png"
-    }
-  },
-  "background": {
-    "service_worker": "background/service-worker.js"
-  },
-  "icons": {
-    "16": "assets/icons/icon-16.png",
-    "48": "assets/icons/icon-48.png",
-    "128": "assets/icons/icon-128.png"
-  }
+	"manifest_version": 3,
+	"name": "MultiPoint Gradient",
+	"version": "1.0.0",
+	"description": "Pick colors from any webpage, sample gradients with a line tool, and export as CSS, Tailwind, SVG, or JSON.",
+	"permissions": ["activeTab", "storage", "scripting"],
+	"host_permissions": ["<all_urls>"],
+	"action": {
+		"default_popup": "popup/index.html",
+		"default_icon": {
+			"128": "assets/icons/icon-128.png"
+		}
+	},
+	"background": {
+		"service_worker": "background/service-worker.js"
+	},
+	"icons": {
+		"128": "assets/icons/icon-128.png"
+	}
 }
