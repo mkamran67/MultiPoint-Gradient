@@ -1,28 +1,30 @@
 {
-  "name": "multipoint-gradient",
-  "version": "1.0.0",
-  "description": "Pick multiple colors from any webpage and generate gradient code",
-  "type": "module",
-  "license": "GPL-3.0",
-  "packageManager": "pnpm@10.30.3",
-  "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
-  },
-  "scripts": {
-    "dev": "vite build --watch --mode development",
-    "build": "vite build && node scripts/build.js",
-    "build:chrome": "vite build",
-    "build:firefox": "vite build && node scripts/build.js --firefox-only",
-    "package": "vite build && node scripts/build.js --zip"
-  },
-  "devDependencies": {
-    "@preact/preset-vite": "^2.9.0",
-    "@types/chrome": "^0.1.37",
-    "typescript": "^5.5.0",
-    "vite": "^5.4.0"
-  },
-  "dependencies": {
-    "@preact/signals": "^1.3.0",
-    "preact": "^10.23.0"
-  }
+	"name": "multipoint-gradient",
+	"version": "1.0.1",
+	"description": "Pick multiple colors from any webpage and generate gradient code",
+	"type": "module",
+	"license": "GPL-3.0",
+	"packageManager": "pnpm@10.30.3",
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	},
+	"scripts": {
+		"dev": "vite build --watch --mode development",
+		"build": "vite build && node scripts/build.js",
+		"build:chrome": "vite build",
+		"build:firefox": "vite build && node scripts/build.js --firefox-only",
+		"package": "vite build && node scripts/build.js --zip"
+	},
+	"devDependencies": {
+		"@preact/preset-vite": "^2.9.0",
+		"@types/chrome": "^0.1.37",
+		"typescript": "^5.5.0",
+		"vite": "^5.4.0"
+	},
+	"dependencies": {
+		"@preact/signals": "^1.3.0",
+		"preact": "^10.23.0"
+	}
 }

@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "MultiPoint Gradient",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Pick colors from any webpage, sample gradients with a line tool, and export as CSS, Tailwind, SVG, or JSON.",
 	"permissions": ["activeTab", "storage", "scripting"],
 	"host_permissions": ["<all_urls>"],
